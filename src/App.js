@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import {VaccineHR,
+        Navi,
+        CofinChart} from 'projects/index';
+import {Header} from 'mainVanner/index'
+import VaccineResult from 'projects/VaccineResult';
+const App = () => (
+  <>
+  <Layout>
+    <Header/>
+    <Navi/>
+  </Layout>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Switch>
+        <Route exact path='/cofin-chart' component={CofinChart}/>
+        <Route exact path='/vaccineHR' component={VaccineHR}/>
+        <Route exact path='/vaccine-result' component={VaccineResult}/>
+  </Switch>
+  </>
   );
-}
-
 export default App;
+const Layout = styled.div`
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+ `
