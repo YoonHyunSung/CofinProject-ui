@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import {VaccineHR,
         Navi,
-        CofinChart} from 'projects/index';
+        CofinChart} from 'components/index';
 import {Header} from 'mainVanner/index'
-import VaccineResult from 'projects/VaccineResult';
+import VaccineResult from 'components/VaccineResult';
 const App = () => (
   <>
   <Layout>

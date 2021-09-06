@@ -56,4 +56,5 @@ const Vdiv = styled.div`
     margin-left: 95px;
     height: 30px;
     position: relative;
+    align="left"
 `
