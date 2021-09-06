@@ -70,10 +70,21 @@ const CofinChart = () => {
       
     
     return (
+    <form>
     <div>
+        <fieldset>
         <h2>Line Chart</h2>
         <Line data ={data}/>
+        </fieldset>
     </div>
+    <div>
+        <fieldset>
+        <h2>Line Chart</h2>
+        <Line data ={data}/>
+        </fieldset>
+    </div>
+    </form>
+    
     )
 }
 export default CofinChart
