@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import {InpectionNavi} from "chartpages/index";
+import {InpectionNavi, ChartHeader} from "chartpages/index";
 
 const Inpectionpage =() => {
     return(
         <>
         <LayoutDiv>
+            <ChartHeader/>
             <InpectionNavi/>
         </LayoutDiv>
         </>

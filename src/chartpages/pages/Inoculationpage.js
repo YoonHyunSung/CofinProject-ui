@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import {InoculationNavi} from "chartpages/index";
-import { Switch,Route } from 'react-router-dom';
-import ChartPage from "./ChartPage";
+import {InoculationNavi,ChartHeader} from "chartpages/index";
 
 const Inoculationpage =() => {
     return(
         <>
         <LayoutDiv>
+            <ChartHeader/>
             <InoculationNavi/>
         </LayoutDiv>
         </>

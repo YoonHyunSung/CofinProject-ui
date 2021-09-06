@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import {Route, Switch } from 'react-router-dom';
 import { ChartPage, CofinChart, LocalChart, Inpectionpage, Inoculationpage, InoculationNavi} from 'chartpages/index';
-import VaccineResult from 'components/VaccineResult';
 import MainHeader from 'main-vanner/MainHeader';
-import { CheckUp } from 'vaccinepages/index';
+import { CheckUp, VaccineResult } from 'vaccinepages/index';
 const App = () => {
   return(
  <>
@@ -22,9 +21,9 @@ const App = () => {
         <Route exact path='/local-chart' component = {LocalChart}/>
 
         <Route exact path='/inpectionpage' component = {Inpectionpage}/>
-        <Route exact path='/inoculationpage' component = {ChartPage,InoculationNavi,Inoculationpage}/>
+        <Route exact path='/inoculationpage' component = {Inoculationpage}/>
 
-
+        <Route exact path='/vaccine-result' component = {VaccineResult}/>
 
 
 
