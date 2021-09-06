@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-
-const VaccineHR = () =>{
-    return(<body margin ="">
-    <Vform>
-
+const Basic =()=>{
+    return(
         <Vsection>
             <Vdiv>
                 <fieldset>
@@ -42,53 +38,10 @@ const VaccineHR = () =>{
                 </fieldset>
             </Vdiv>
         </Vsection>
+        )
+}
+export default Basic
 
-        <Vsection>
-            <Vdiv>
-                <Vp>
-                    <thead><strong>질환 관련(본인과 관련된 질환에 대하여 체크해주세요.)</strong></thead>
-                    
-                    <table border="1">
-                        <tr>
-                        <th>구분</th>
-                        <th>있음</th>
-                        <th>없음</th>
-                        </tr>
-
-                        <tr>
-                        <th>암</th>
-                        <th><input type="radio"/></th>
-                        <th><input type="radio"/></th>
-                        </tr>
-
-                        <tr>
-                        <th>당뇨병</th>
-                        <th><input type="radio"/></th>
-                        <th><input type="radio"/></th>
-                        </tr>
-
-                        <tr>
-                        <th>암</th>
-                        <th><input type="radio"/></th>
-                        <th><input type="radio"/></th>
-                        </tr>
-                        <tr>
-                        <th>암</th>
-                        <th><input type="radio"/></th>
-                        <th><input type="radio"/></th>
-                        </tr>
-                        
-                    </table>
-
-                </Vp>
-            </Vdiv>
-        </Vsection>
-        <input type="submit" value="결과 보기"></input>
-        <Vlabel><Link to='vaccine-result'>다음으로</Link></Vlabel>
-    </Vform>
-    </body>)
-    }
-export default VaccineHR
 const Vdiv = styled.div`
     width: 900px;
     height: 250px;
@@ -103,11 +56,6 @@ const Vp = styled.p`
 const Vsection = styled.section`
     width: 1000px;
     height: 325px;
-`
-const Vform = styled.form`
-    margin-bottom: 20px;
-    display: block;
-    margin-top: 0em;    
 `
 const Vlabel = styled.label`
     cursor: default;
@@ -125,13 +73,5 @@ const Vfieldset = styled.fieldset`
     padding:0;
     clear: both;
     border: 0;
-`
-const Vlegend = styled.legend`
-    display: block;
-    float: left;
-    width: 220px;
-    height: 23px;
-    margin: 10px 0 0 40px;
-    padding: 0;
 `
     

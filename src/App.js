@@ -1,24 +1,38 @@
 import styled from 'styled-components';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import {VaccineHR,
-        Navi,
-        CofinChart} from 'components/index';
-import {Header} from 'mainVanner/index'
+import {Route, Switch } from 'react-router-dom';
+import { ChartPage, CofinChart, LocalChart, Inpectionpage, Inoculationpage, InoculationNavi} from 'chartpages/index';
 import VaccineResult from 'components/VaccineResult';
-const App = () => (
-  <>
+import MainHeader from 'main-vanner/MainHeader';
+import { CheckUp } from 'vaccinepages/index';
+const App = () => {
+  return(
+ <>
   <Layout>
-    <Header/>
-    <Navi/>
+    <MainHeader/>
   </Layout>
-
+  
   <Switch>
-        <Route exact path='/cofin-chart' component={CofinChart}/>
-        <Route exact path='/vaccineHR' component={VaccineHR}/>
-        <Route exact path='/vaccine-result' component={VaccineResult}/>
+        <Route exact path='/MainHeader' component={MainHeader}/>
+        {/* <Route exact path='/inpectionpage' component = {Inpectionpage}/> */}
+        {/* <Route exact path='/inoculationpage' component = {Inoculationpage}/> */}
+        <Route exact path='/check-up' component={CheckUp}/>
+        <Route exact path='/chart-pages' component={ChartPage}/>
+        
+        <Route exact path='/cofin-chart' component = {CofinChart}/>
+        <Route exact path='/local-chart' component = {LocalChart}/>
+
+        <Route exact path='/inpectionpage' component = {Inpectionpage}/>
+        <Route exact path='/inoculationpage' component = {ChartPage,InoculationNavi,Inoculationpage}/>
+
+
+
+
+
   </Switch>
+
   </>
-  );
+  )
+};
 export default App;
 const Layout = styled.div`
   margin: 0 auto;
