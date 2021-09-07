@@ -1,3 +1,4 @@
+import React from 'react'
 
 const Result =() =>{
     return(<><fieldset width ="100%" heigth="100%">
